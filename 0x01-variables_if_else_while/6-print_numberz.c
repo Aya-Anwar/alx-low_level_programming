@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  * Description: Prints all single digit numbers of base 10 starting from 0
- * Return : 0 (Success)
+ * Return: 0 (Success)
  */
 int main(void)
 {
@@ -10,7 +10,7 @@ int main(void)
 
 	while (digit <= '9')
 	{
-		putchar (digit + 48);
+		putchar (digit);
 		digit++;
 	}
 	putchar ('\n');
