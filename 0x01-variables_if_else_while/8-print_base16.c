@@ -12,8 +12,8 @@ int main(void)
 	{
 		putchar(digit);
 		digit++;
-		if (digit == 57)
-			digit += 40;
+		if (digit == 58)
+			digit += 39;
 	}
 	putchar('\n');
 	return (0);
