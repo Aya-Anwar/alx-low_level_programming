@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * main - Entry point
- * Description: prints 10 times the alphabet, in lowercase
- * Return: 0 (Success)
- */
+ * print_alphabet_x10 - function print a to z 0 times
+ *
+ * Return: void
+*/
 void print_alphabet_x10(void)
 {
 	int line;
