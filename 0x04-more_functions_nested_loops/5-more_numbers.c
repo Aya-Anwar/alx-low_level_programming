@@ -1,20 +1,24 @@
 #include "main.h"
+
 /**
  * more_numbers - print from 0 to 14 ten times using _putchar
+ *
  * Return: 0 (Success)
- */
+*/
+
 void more_numbers(void)
 {
-	int i, j, n;
+	int n, r, c;
 
-	for (i = 0; i <= 9; i++)
+	for (r = 1; r <= 10; r++)
 	{
-		for (j = 0; j <= 14; j++)
+		for (c = 0; c <= 14; c++)
 		{
-			if (j > 9)
+			n = c;
+			if (c > 9)
 			{
-				n = j % 10;
 				_putchar(1 + 48);
+				n = c % 10;
 			}
 			_putchar(n + 48);
 		}
