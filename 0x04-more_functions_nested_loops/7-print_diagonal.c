@@ -1,26 +1,29 @@
 #include "main.h"
+
 /**
-* print_diagonal - print digit line
-* @n: is the number os times the ( _ ) printed
+ * print_diagonal - print diagonal line
+ *
+ * @n: is the number of times the \ printed
 */
+
 void print_diagonal(int n)
 {
-	int lch, p;
+	int p, space;
 
-		if (n <= 0)
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		for (p = 0; p < n; p++)
 		{
+			for (space = 0; space < p; space++)
+			{
+				_putchar(32);
+			}
+			_putchar(92);
 			_putchar('\n');
 		}
-		else
-		{
-			for (lch = 1; lch <= n; lch++)
-			{
-				for (p = 0; p < lch; p++)
-				{
-				_putchar(32);
-				}
-				_putchar(92);
-				_putchar('\n');
-			}
-		}
+	}
 }
