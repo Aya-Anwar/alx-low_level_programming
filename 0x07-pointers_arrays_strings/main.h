@@ -10,4 +10,5 @@ unsigned int _strspn(char *s, char *accept);
 void set_string(char **s, char *to);
 char *_strpbrk(char *s, char *accept);
 void print_chessboard(char (*a)[8]);
+void print_diagsums(int *a, int size);
 #endif
