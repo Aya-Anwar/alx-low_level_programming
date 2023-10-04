@@ -1,25 +1,50 @@
-#include<stdio.h>
-#include<stdlib.h>
-/**
- * main - adds numbers
- * @argc: number of arguments passed to the function
- * @argv: argument vector of pointers to strings
- *
- * Return: 0 if no errors, else 1
- */
-int main(int argc, char *argv[])
-{
-	int i;
-	int sum = 0;
+#include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
 
-	if (argc < 2)
+/**
+ * is_digit_only - checks if a string contains only digits
+ * @s: pointer to the string
+ * Return: 1 if a only digits, 0 otherwise
+ */
+
+int is_digit_only(char *s)
+{
+	while (*s)
 	{
-		printf("0\n");
+		if (isdigit(*s++) == 0)
+			return (0);
 	}
-		for (i = 1; i < argc; i++)
+	return (1);
+}
+
+/**
+ * main - Entry point
+ * @argc: arguments count
+ * @argv: array of pointers to argument names
+ * Return: 0 on success, 1 if at least one argument is not digits only
+ */
+
+int main(int argc, char **argv)
+{
+	int i, sum = 0;
+
+	if (argc == 1)
+	{
+		sum = 0;
+	}
+
+	for (i = 1; i <= argc - 1; i++)
+	{
+		if (is_digit_only(argv[i]))
+			sum += atoi(argv[i]);
+		else
 		{
-		sum += atoi(argv[i]);
+			printf("Error\n");
+			return (1);
 		}
-		printf("%d\n", sum);
-		return (0);
+	}
+
+	printf("%d\n", sum);
+	return (0);
 }
