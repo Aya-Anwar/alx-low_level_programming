@@ -39,6 +39,7 @@ void print_all(const char * const format, ...)
 		else if (format[j] == 'f')
 		{
 			fl =(float) va_arg(args, double);
+			printf("%f", fl);
 			if (format[j + 1] != '\0')
 			{
 				printf(", ");
