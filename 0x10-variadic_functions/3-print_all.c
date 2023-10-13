@@ -14,6 +14,7 @@ void print_all(const char * const format, ...)
 	char *str;
 	int j = 0;
 	int string_printed = 0;
+	char *sep = ", ";
 
 	va_start(args, format);
 	for (j = 0; format[j]; j++)
@@ -24,7 +25,7 @@ void print_all(const char * const format, ...)
 			printf("%c", ch);
 			if (format[j + 1] != '\0')
 			{
-				printf(", ");
+				printf("%s", sep);
 			}
 		}
 		else if (format[j] == 'i')
@@ -33,7 +34,7 @@ void print_all(const char * const format, ...)
 			printf("%d", num);
 			if (format[j + 1] != '\0')
 			{
-				printf(", ");
+				printf("%s", sep);
 			}
 		}
 		else if (format[j] == 'f')
@@ -42,7 +43,7 @@ void print_all(const char * const format, ...)
 			printf("%f", fl);
 			if (format[j + 1] != '\0')
 			{
-				printf(", ");
+				printf("%s", sep);
 			}
 		}
 		else if (format[j] == 's')
@@ -57,7 +58,7 @@ void print_all(const char * const format, ...)
 				printf("%s", str);
 				if (format[j + 1] != '\0')
 				{
-					printf(", ");
+					printf("%s", sep);
 				}
 				string_printed = 1;
 			}
