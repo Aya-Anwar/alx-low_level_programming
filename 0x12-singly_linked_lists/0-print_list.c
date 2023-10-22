@@ -6,30 +6,32 @@
  *
  * Return: integer length of string
  */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	if (!s)
+		return (0);
+	while (*s++)
+		i++;
+	return (i);
+}
+
+/**
+ * print_list - prints a linked lists
+ * @h: pointer to first node
+ *
+ * Return: size of list
+ */
 size_t print_list(const list_t *h)
 {
-    size_t i;
-    list_t *p;
+	size_t i = 0;
 
-    *h = p;
-    if (h == NULL)
-    {
-        return (NULL);
-    }
-    else
-    {
-        for (i = 0; h != NULL; i++)
-        {
-            if (str == NULL)
-            {
-                return (nil);
-            }
-            else
-            {
-                printf("[%d] %s\n", h->len, h->str);
-                p = p->next;
-            }
-            return (i);
-        }
-    }
+	while (h)
+	{
+		printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
+		h = h->next;
+		i++;
+	}
+	return (i);
 }
