@@ -8,8 +8,8 @@
  */
 size_t list_len(const list_t *h)
 {
-	const list_t *temp = h
-	size_t i;
+	const list_t *temp = h;
+	size_t i;;
 
 	if (h == NULL)
 	{
