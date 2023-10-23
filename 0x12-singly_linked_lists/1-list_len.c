@@ -11,13 +11,13 @@ size_t list_len(const list_t *h)
 	const list_t *temp = h
 	size_t i;
 
-	if (temp == NULL)
+	if (h == NULL)
 	{
 		return (0);
 	}
 	else
 	{
-		for (i = 0; temp != NULL; i++)
+		for (i = 0; h != NULL; i++)
 		{
 			temp = temp->next;
 		}
