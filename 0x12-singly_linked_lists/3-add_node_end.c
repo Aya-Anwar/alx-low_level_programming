@@ -17,5 +17,5 @@ return (NULL);
 newnode->str = strdup(str);
 newnode->len = strlen(str);
 newnode->next = NULL;
-return (*head);
+return (newnode);
 }
