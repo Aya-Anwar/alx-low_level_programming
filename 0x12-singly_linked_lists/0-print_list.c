@@ -7,22 +7,23 @@
 
 size_t print_list(const list_t *h)
 {
+	const list_t *temp = h;
 	size_t i;
 
-	if (h == NULL)
+	if (temp == NULL)
 	{
 		return (0);
 	}
 	else
 	{
-		for (i = 0; h != NULL; i++)
+		for (i = 0; temp != NULL; i++)
 		{
-			if (h->str == NULL)
+			if (temp->str == NULL)
 			printf("[0] (nil)\n");
 			else
-			printf("[%d] %s\n", h->len, h->str);
+			printf("[%d] %s\n", temp->len, temp->str);
 
-			h = h->next;
+			temp = temp->next;
 		}
 	}
 	return (i);
