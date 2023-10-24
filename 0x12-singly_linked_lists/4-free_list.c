@@ -11,12 +11,9 @@ void free_list(list_t *head)
 while (head != NULL)
 {
 list_t *temp = head;
-if (temp != NULL)
-{
-if (temp->str != NULL)
-free(temp->str);
-free(temp);
-}
+while (head != NULL)
+temp = head;
 head = head->next;
+free(temp);
 }
 }
