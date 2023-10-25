@@ -18,8 +18,9 @@ return (-1);
 if (index == 0)
 {
 temp = *head;
-*head = temp->next;
+*head = (*head)->next;
 free(temp);
+return (1);
 }
 else
 {
@@ -27,6 +28,10 @@ while (temp->next != NULL)
 {
 temp2 = temp;
 temp = temp->next;
+}
+if (temp == NULL)
+{
+return (-1);
 }
 temp2->next = NULL;
 free(temp);
