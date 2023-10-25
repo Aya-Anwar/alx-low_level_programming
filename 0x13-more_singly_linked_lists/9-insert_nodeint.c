@@ -23,7 +23,7 @@ new_node->next = *head;
 *head = new_node;
 return (new_node);
 }
-for (i = 0; i < idx - 1; i++)
+for (i = 1; i < idx; i++)
 {
 if (temp == NULL)
 {
