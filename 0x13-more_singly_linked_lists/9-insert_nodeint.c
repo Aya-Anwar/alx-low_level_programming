@@ -23,6 +23,10 @@ new_node->next = *head;
 *head = new_node;
 return (new_node);
 }
+for (i = 1; i < idx; i++)
+{
+temp = temp->next;
+}
 new_node->next = temp->next;
 temp->next = new_node;
 return (new_node);
