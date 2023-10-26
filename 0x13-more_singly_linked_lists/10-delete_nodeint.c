@@ -13,7 +13,7 @@ listint_t *temp = *head;
 listint_t *temp2;
 unsigned int i;
 
-if (*head == NULL || head == NULL)
+if (*head == NULL)
 {
 return (-1);
 }
@@ -24,7 +24,7 @@ if (index == 0)
 free(temp);
 return (1);
 }
-for (i = 0; i < index; i++)
+for (i = 1; i < index; i++)
 {
 temp2 = temp;
 temp = temp->next;
