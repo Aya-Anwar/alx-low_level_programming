@@ -25,22 +25,17 @@ temp = *head;
 free(temp);
 return (1);
 }
-if (temp ->next != NULL)
-{
 for (i = 0; i < index; i++)
 {
-temp2 = temp;
-temp = temp->next;
-}
-
 if (temp == NULL)
 {
 return (-1);
 }
-
+temp2 = temp;
+temp = temp->next;
+}
 temp2->next = temp->next;
 free(temp);
 temp = NULL;
 return (1);
-}
 }
