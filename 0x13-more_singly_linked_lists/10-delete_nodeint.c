@@ -33,9 +33,8 @@ if (temp == NULL)
 {
 return (-1);
 }
-temp2->next = NULL;
+temp2->next = temp->next;
 free(temp);
-temp = NULL;
 }
 return (1);
 }
