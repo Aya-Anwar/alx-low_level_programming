@@ -13,7 +13,7 @@ listint_t *temp = *head;
 listint_t *temp2;
 unsigned int i;
 
-if (*head == NULL)
+if (*head == NULL || head == NULL)
 {
 return (-1);
 }
