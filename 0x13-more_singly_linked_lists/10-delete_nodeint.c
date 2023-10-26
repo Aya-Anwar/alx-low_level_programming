@@ -15,29 +15,25 @@ unsigned int i;
 
 if (*head == NULL)
 {
-    return (-1);
+return (-1);
 }
 
 if (index == 0)
 {
-    *head = (*head)->next;
-    free(temp);
-    return (1);
+*head = (*head)->next;
+free(temp);
+return (1);
 }
 
 for (i = 0; i < index; i++)
 {
-    if (temp == NULL)
-    {
-        return (-1);
-    }
-    temp2 = temp;
-    temp = temp->next;
+temp2 = temp;
+temp = temp->next;
 }
 
 if (temp == NULL)
 {
-    return (-1);
+return (-1);
 }
 
 temp2->next = temp->next;
