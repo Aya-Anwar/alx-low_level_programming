@@ -4,12 +4,23 @@
  * @n: the number to print
  * Return: void
 */
-void print_binary(unsigned long int n) {
-int numBits = sizeof(n) * 8; // Assuming 8 bits per byte
+void print_binary(unsigned long int n)
+{
+int binary[32];
+int i = 0;
+int j;
 
-for (int i = numBits - 1; i >= 0; i--) {
-unsigned long int mask = 1UL << i;
-putchar((n & mask) ? '1' : '0');
+while (n > 0)
+{
+binary[i] = n % 2;
+n = n / 2;
+i++;
 }
-putchar('\n');
+
+for (j = i - 1; j >= 0; j--)
+{
+printf("%d", binary[j]);
+}
+
+return;
 }
