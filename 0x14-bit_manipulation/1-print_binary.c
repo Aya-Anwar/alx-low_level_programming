@@ -11,11 +11,6 @@ void print_binary(unsigned long int n)
 int binary[32];
 int i = 0;
 int j;
-if (n == 0)
-{
-printf("%ld",n);
-return;
-}
 while (n > 0)
 {
 binary[i] = n % 2;
