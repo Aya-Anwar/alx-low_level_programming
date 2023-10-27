@@ -6,6 +6,10 @@
 */
 void print_binary(unsigned long int n)
 {
+if (n == 0) {
+_putchar('0');
+return;
+}
 int binary[32];
 int i = 0;
 int j;
