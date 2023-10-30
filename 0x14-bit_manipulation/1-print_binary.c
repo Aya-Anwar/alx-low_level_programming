@@ -16,22 +16,13 @@ _putchar('0');
 return;
 }
 
-while (mask < n)
-{
-mask <<= 1;
-}
+mask <<= 63;
 
-if (mask > n)
-mask >>= 1;
-
+while ((mask & n) == 0)
+	mask >>= 1;
 while (mask)
 {
-	if (n & mask)
-	_putchar('1');
-	else
-	_putchar('0');
-
-mask >>= 1;
+	_putchar(mask & n ? '1' : '0');
+	mask >>= 1;
 }
-return;
 }
