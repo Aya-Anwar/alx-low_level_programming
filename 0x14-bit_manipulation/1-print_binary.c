@@ -1,29 +1,37 @@
-#include "main.h"
+#include"main.h"
+
 /**
- * print_binary - a function that prints the binary representation of a number
- * @n: the number to print
- * Return: void
+ * print_binary - function that converts a binary number to an unsigned int
+ * @n: unsigned long int n number that should converted
+ * Return: (void)
 */
+
 void print_binary(unsigned long int n)
 {
-int binary[32];
-int i = 0;
-int j;
+unsigned long int mask = 1;
 
-if (n == 0) {
+if (n == 0)
+{
 _putchar('0');
 return;
 }
-while (n > 0)
+
+while (mask < n)
 {
-binary[i] = n % 2;
-n = n / 2;
-i++;
+mask <<= 1;
 }
 
-for (j = i - 1; j >= 0; j--)
+if (mask > n)
+mask >>= 1;
+
+while (mask)
 {
-_putchar(binary[j] + '0');
+	if (n & mask)
+	_putchar('1');
+	else
+	_putchar('0');
+
+mask >>= 1;
 }
-return;
+
 }
