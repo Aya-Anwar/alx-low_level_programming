@@ -23,6 +23,7 @@ if (fd == -1)
 buf = malloc(sizeof(char) * letters);
 if (buf == NULL)
 {
+	close(fd);
 	return (0);
 }
 chars_read = read(fd, buf, letters);
@@ -31,13 +32,12 @@ if (chars_read == -1)
 	free(buf);
 	return (0);
 }
-chars_written = write(STDOUT_FILENO, buf, letters);
+chars_written = write(STDOUT_FILENO, buf, chars_read);
 if (chars_written == -1 || chars_written != chars_read)
 {
 	free(buf);
 	return (0);
 }
-free(buf);
 close(fd);
 return (chars_written);
 
