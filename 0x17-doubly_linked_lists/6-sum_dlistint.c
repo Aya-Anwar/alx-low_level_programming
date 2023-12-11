@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * dlistint_t - returns the sum of all the data (n)
+ * sum_dlistint - returns the sum of all the data (n)
  * @head: pointer to head node
  * Return: int sum of values
 */
