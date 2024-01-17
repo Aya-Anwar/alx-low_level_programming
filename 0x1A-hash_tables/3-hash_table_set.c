@@ -18,7 +18,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		return (0);
 	}
-	index = hash_djb2((unsigned char *)key);
+	index = hash_djb2((unsigned char *)key) % ht->size;
 	current = ht->array[index];
 	while (current)
 	{
