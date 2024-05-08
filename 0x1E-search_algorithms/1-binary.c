@@ -1,5 +1,4 @@
 #include "search_algos.h"
-
 /**
  * binary_search - searches array of integers using the Binary search algorithm
  * @array: Pointer to the first element of the array to search.
@@ -13,14 +12,20 @@ int binary_search(int *array, size_t size, int value)
 
 	while (left <= right)
 	{
-		printf("Searching in array: ");
-		for (size_t i = left; i <= right; i++)
+		printf("Searching in array: %d", array[i]);
+		for (i = left; i < right; i++)
 		{
-			printf("%d", array[i]);
-			if (i < right)
-				printf(", ");
+			printf("%d, ", array[i]);
 		}
-		printf("\n");
+		printf("%d\n", array[i]);
+		printf("Searching in array: ");
+        for (i = left; i <= right; i++)
+        {
+            printf("%d", array[i]);
+            if (i < right)
+                printf(", ");
+        }
+        printf("\n");
 		mid = left + (right - left) / 2;
 		if (array[mid] == value)
 			return (mid);
